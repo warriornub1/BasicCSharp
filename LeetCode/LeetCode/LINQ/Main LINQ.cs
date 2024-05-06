@@ -15,7 +15,7 @@ namespace LeetCode.LINQ
         {
 
             // Practice 
-            SelectMany p = new SelectMany();
+            SelectMany1 p = new SelectMany1();
 
         }
 
