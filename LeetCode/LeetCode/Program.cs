@@ -1,45 +1,30 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using LeetCode._0._SQL;
 using LeetCode._1._Hashmap;
 using LeetCode._2._Stack;
 using LeetCode._6._Backtrack;
+using LeetCode.Casting;
+using LeetCode.DateTime1;
+using LeetCode.Inheritance;
 using LeetCode.LinkedList;
 using LeetCode.LINQ;
+using LeetCode.Recursion;
+using LeetCode.Searching;
 
 
-// HashMap
-ValidAnagram v = new ValidAnagram();
-Console.WriteLine(v.IsAnagram("anagram", "nagaram"));
-Console.WriteLine(v.IsAnagram("rat", "car"));
+//MainHashMap mainHashMap = new MainHashMap();
 
-Group_Anagram v2 = new Group_Anagram();
-string[] strs = { "eat", "tea", "tan", "ate", "nat", "bat" };
-IList<IList<string>> result = v2.GroupAnagrams(strs);
-var resultString = result.Select(group => string.Join(" ", group));
+//Main_LINQ main_LINQ = new Main_LINQ();
 
-foreach (var group in resultString)
-    Console.WriteLine("[ {0} ]", group);
+// Recursion r = new Recursion(10);
 
-/*
-// Stack
-Valid_Parentheses vp = new Valid_Parentheses();
-Console.WriteLine(vp.IsValid("()[]{}"));
+// Linear_Search l = new Linear_Search();
 
-// Backtrack
-Subset sb = new Subset();
-int[] nums = { 1, 2, 3 };
-IList<IList<int>> subsets = sb.Subsets(nums);
+// Casting c = new Casting();
 
-Console.WriteLine("All Subsets:");
-foreach(var subset in subsets)
-{
-    Console.Write("[");
-    Console.Write(string.Join(" ", subset));
-    Console.Write("]");
-}
-*/
+// DateTime1 d = new DateTime1();
 
-//MainLL m = new MainLL();
 
-Main_LINQ main_LINQ = new Main_LINQ();
+Recyclable r = new Recyclable();
 
 Console.ReadLine();

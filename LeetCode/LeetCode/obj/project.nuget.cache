@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1i9Esgva8voy6Z/MLAw8im3QV3jPANVDQ7G+OSj/H4YvHOC8nP8q0Rx2lNNK2I0hkybEv+n2Ex/X5dOuHVQM/g==",
+  "dgSpecHash": "YGjCs9Gd5lxDFhFRNAyGhFpv7PZEYc8nmtOVIU1vG7lCDRZ0LHnnGeUpyGs6veg1SZBfRWgjfl99VqwkWbVSWw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\kahyong.chua\\source\\repos\\LeetCode\\LeetCode\\LeetCode.csproj",
+  "projectFilePath": "C:\\Users\\kahyong.chua\\source\\repos\\BasicCSharp\\LeetCode\\LeetCode\\LeetCode.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

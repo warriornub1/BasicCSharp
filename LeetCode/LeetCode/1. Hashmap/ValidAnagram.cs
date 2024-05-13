@@ -32,5 +32,17 @@ namespace LeetCode._1._Hashmap
             return true;
 
         }
+
+        public void LINQ()
+        {
+            string[] words = { "eat", "tea", "tan", "ate", "nat", "bat" };
+
+            var groupedAnagrams = words.GroupBy(w => String.Concat(w.OrderBy(c => c)));
+
+            foreach (var group in groupedAnagrams)
+            {
+                Console.WriteLine($"Anagrams of {group.Key}: {string.Join(", ", group)}");
+            }
+        }
     }
 }

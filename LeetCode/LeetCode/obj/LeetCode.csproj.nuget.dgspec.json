@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kahyong.chua\\source\\repos\\LeetCode\\LeetCode\\LeetCode.csproj": {}
+    "C:\\Users\\kahyong.chua\\source\\repos\\BasicCSharp\\LeetCode\\LeetCode\\LeetCode.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kahyong.chua\\source\\repos\\LeetCode\\LeetCode\\LeetCode.csproj": {
+    "C:\\Users\\kahyong.chua\\source\\repos\\BasicCSharp\\LeetCode\\LeetCode\\LeetCode.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kahyong.chua\\source\\repos\\LeetCode\\LeetCode\\LeetCode.csproj",
+        "projectUniqueName": "C:\\Users\\kahyong.chua\\source\\repos\\BasicCSharp\\LeetCode\\LeetCode\\LeetCode.csproj",
         "projectName": "LeetCode",
-        "projectPath": "C:\\Users\\kahyong.chua\\source\\repos\\LeetCode\\LeetCode\\LeetCode.csproj",
+        "projectPath": "C:\\Users\\kahyong.chua\\source\\repos\\BasicCSharp\\LeetCode\\LeetCode\\LeetCode.csproj",
         "packagesPath": "C:\\Users\\kahyong.chua\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kahyong.chua\\source\\repos\\LeetCode\\LeetCode\\obj\\",
+        "outputPath": "C:\\Users\\kahyong.chua\\source\\repos\\BasicCSharp\\LeetCode\\LeetCode\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kahyong.chua\\AppData\\Roaming\\NuGet\\NuGet.Config",

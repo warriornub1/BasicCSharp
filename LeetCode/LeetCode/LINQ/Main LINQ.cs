@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LeetCode.Practice;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -15,7 +16,7 @@ namespace LeetCode.LINQ
         {
 
             // Practice 
-            SelectMany1 p = new SelectMany1();
+            OrderBy od = new OrderBy();
 
         }
 
