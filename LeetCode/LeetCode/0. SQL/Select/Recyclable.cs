@@ -23,7 +23,14 @@ namespace LeetCode._0._SQL
                                     .Select(x => x.id)
                                     .ToArray();
 
+            var result1 = from p in products
+                          where p.IsRecyclable == true && p.IsLowFat == true
+                          select p.id;
+
+
+
             Console.WriteLine(String.Join(", ", result));
+            Console.WriteLine(String.Join(", ", result1));
 
         }
     }

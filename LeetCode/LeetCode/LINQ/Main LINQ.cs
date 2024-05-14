@@ -16,7 +16,9 @@ namespace LeetCode.LINQ
         {
 
             // Practice 
-            OrderBy od = new OrderBy();
+            //OrderBy od = new OrderBy();
+
+            Join j = new Join();
 
         }
 

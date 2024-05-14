@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LeetCode.Recursion
+namespace LeetCode.DataStructures.Recursion
 {
     internal class Recursion
     {
@@ -33,7 +33,7 @@ namespace LeetCode.Recursion
                 return;
             }
             else
-            { 
+            {
                 int k = n * n;
                 Console.WriteLine(k);
                 calculaterecursive(n - 1);
