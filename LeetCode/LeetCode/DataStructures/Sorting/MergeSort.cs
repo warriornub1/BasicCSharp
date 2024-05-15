@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LeetCode.LINQ;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,56 +14,53 @@ namespace LeetCode.DataStructures.Sorting
             Console.WriteLine();
             Console.WriteLine("Merge Sort");
             Console.WriteLine("--------------------------------");
-            int[] searched = new int[] { 84, 21, 45, 96, 15 };
-            mergesort(searched, 0, searched.Length);
-            Console.WriteLine(string.Join(", ", searched));
+
+            int[] l1 = new int[] { 84, 21, 45, 96, 15 };
+            int[] result = mergeSort(l1);
+            Console.WriteLine(string.Join(", ", result));
         }
 
-        public void mergesort(int[] A, int left, int right)
+        public int[] mergeSort(int[] arr)
         {
-            if(left < right)
-            {
-                int mid = (right - left) / 2 + left;
-                mergesort(A, left, mid);
-                mergesort(A, mid + 1, right);
-                mergesort(A, left, mid + 1);
-                merge(A, left, mid, right);
-            }
+            if(arr.Length <= 1) 
+                return arr;
+
+            int mid = arr.Length / 2;
+            int[] left = new ArraySegment<int>(arr, 0, mid).ToArray();
+            int[] right = new ArraySegment<int>(arr, mid, arr.Length - mid).ToArray();
+
+            left = mergeSort(left);
+            right = mergeSort(right);
+
+            return merge(left, right);
         }
 
-        public void merge(int[] A, int left, int mid, int right)
+        public int[] merge(int[] l1, int[] l2)
         {
-            int i = left;
-            int j = mid + 1;
-            int k = left;
-
-            int[] B = new int[right + 1];
-            while (i <= mid && j <= right)
+            int[] res = new int[l1.Length + l2.Length];
+            int i = 0;
+            int k = 0;
+            int j = 0;
+            while (i < l1.Length && k < l2.Length) 
             {
-                if (A[i] < A[j])
-                {
-                    B[k] = A[i];
-                    i++;
-                }
+                if (l1[i] < l2[k])
+                    res[j++] = l1[i++];
                 else
-                {
-                    B[k] = A[j];
-                    j++;
-                }
+                    res[j++] = l2[k++];
             }
 
-            while(i <= mid)
+            while(i < l1.Length)
             {
-                B[k] = A[i];
-                i++;
-                k++;
+                res[j++] = l1[i++];
             }
-            while (j <= right)
+
+            while(k < l2.Length)
             {
-                B[k] = A[j];
-                j++;
-                k++;
+                res[j++] = l2[k++];
             }
+
+            return res;
+
         }
     }
 }
