@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using LeetCode._0._SQL;
 using LeetCode._0._SQL.BasicJoins;
+using LeetCode._0._SQL.Select;
 using LeetCode._1._Hashmap;
 using LeetCode._2._Stack;
 using LeetCode._6._Backtrack;
@@ -16,14 +17,27 @@ using System.Collections.Generic;
 using System.Diagnostics;
 
 
-linkedList();
-
-DesignPattern();
+// Hashing
+Hashmap();
 
 // SQL
-//Recyclable r = new Recyclable();
-//CustomerReferee cr = new CustomerReferee();
-//ReplaceEmployeeID re = new ReplaceEmployeeID();
+//SQL();
+
+void Hashmap()
+{
+    Console.WriteLine("Starting Hashmap");
+
+    Console.WriteLine("\nStarting Contains Duplicate");
+    Console.WriteLine("---------------------------");
+    ContainsDuplicate c = new ContainsDuplicate(new int[] { 1, 2, 3, 1 });
+    ContainsDuplicate c1 = new ContainsDuplicate(new int[] { 1, 2, 3, 4 });
+    ContainsDuplicate c2 = new ContainsDuplicate(new int[] { 1, 1, 1, 3, 3, 4, 3, 2, 4, 2 });
+
+    Console.WriteLine("\nStarting Valid Anagram");
+    Console.WriteLine("---------------------------");
+    Valid_Anagram va = new Valid_Anagram("anagram", "nagaram");
+    Valid_Anagram va1 = new Valid_Anagram("rat", "nagaram");
+}
 
 void linkedList()
 {
@@ -38,23 +52,9 @@ void linkedList()
     L.display();
 }
 
-void DesignPattern()
+void SQL()
 {
-    /*
-    Console.WriteLine();
-    Console.WriteLine("Design Pattern");
-    Console.WriteLine("-------------------");
-
-    SingleResponsibility s = new SingleResponsibility();
-    s.AddEntry("I cried today");
-    s.AddEntry("I ate a bug");
-    Console.WriteLine(s);
-
-    var p = new Persistence();
-    var filename = @"C:\Users\kahyong.chua\source\repos\BasicCSharp\LeetCode\LeetCode\Design Pattern\Logs\journal.txt";
-    p.SaveToFile(s, filename, true);
-    Process.Start("notepad.exe", filename);
-    */
-
-    Open_Closed op = new Open_Closed();
+    //Recyclable r = new Recyclable();
+    //CustomerReferee cr = new CustomerReferee();
+    BigCountry bg = new BigCountry();
 }

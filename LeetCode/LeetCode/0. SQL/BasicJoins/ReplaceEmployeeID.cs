@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,21 +28,20 @@ namespace LeetCode._0._SQL.BasicJoins
             };
 
 
-        var result = from e in employees
-                    join eu in employeeUNIs
-                    on e.id equals eu.id
-                    into employeeGroup
-                    from eg in employeeGroup.DefaultIfEmpty()
-                    select new
-                    {
-                        name = e.name,
-                        unique_id = eg == null ? default : eg.unique_id
-                    };
+            var result = from e in employees
+                         join eu in employeeUNIs
+                         on e.id equals eu.id
+                         into EmployeeGroup
+                         from employee in EmployeeGroup.DefaultIfEmpty()
+                         select new
+                         {
 
-            foreach (var e in result)
-            {
-                Console.WriteLine($"{e.name}, {e.unique_id}");
-            }
+                             unique_id = employee.id == null ? default : employee.id,
+                             name = e.name,
+
+                         };
+
+
 
 
             var result1 = employees
@@ -56,6 +56,13 @@ namespace LeetCode._0._SQL.BasicJoins
                                 x.employee.name,
                                 unique_id = subEmployeeUni != null ? subEmployeeUni.unique_id : default
                             });
+
+
+
+            foreach (var e in result)
+            {
+                Console.WriteLine($"{e.name}, {e.unique_id}");
+            }
 
             foreach (var e in result)
             {

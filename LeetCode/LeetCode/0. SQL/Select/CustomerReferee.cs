@@ -9,24 +9,23 @@ namespace LeetCode._0._SQL
     internal class CustomerReferee
     {
 
-        public CustomerReferee() 
+        public CustomerReferee()
         {
             List<Customer> customers = new List<Customer>
-        {
-            new Customer(1, "Will", null),
-            new Customer(2, "Jane", null),
-            new Customer(3, "Alex", 2),
-            new Customer(4, "Bill", null),
-            new Customer(5, "Zack", 1),
-            new Customer(6, "mark", 2),
-        };
+            {
+                new Customer(1, "Will", null),
+                new Customer(2, "Jane", null),
+                new Customer(3, "Alex", 2),
+                new Customer(4, "Bill", null),
+                new Customer(5, "Zack", 1),
+                new Customer(6, "mark", 2),
+            };
 
-            string[] names = customers.Where(x => x.referee_id != 2)
-                                          .Select(x => x.name)
-                                          .ToArray();
+            IEnumerable<string> names = customers.Where(x => x.referee_id != 2 || x.referee_id is null)
+                                 .Select(x => x.name);
 
-            var names1 = from c in customers
-                             where c.referee_id != 2
+            IEnumerable<string> names1 = from c in customers
+                             where c.referee_id != 2 || c.referee_id is null
                              select c.name;
 
             Console.WriteLine("Customer Referee");

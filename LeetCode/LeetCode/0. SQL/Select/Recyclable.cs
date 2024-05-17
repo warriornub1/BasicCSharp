@@ -19,13 +19,14 @@ namespace LeetCode._0._SQL
                 new Product(4,  false, false),
             };
 
-            int[] result = products.Where(x => x.IsLowFat == true && x.IsRecyclable == true)
-                                    .Select(x => x.id)
-                                    .ToArray();
+            int[] result = products.Where(p => p.IsLowFat == true && p.IsRecyclable == true)
+                                   .Select(p => p.id)
+                                   .ToArray();
 
-            var result1 = from p in products
-                          where p.IsRecyclable == true && p.IsLowFat == true
-                          select p.id;
+
+            IEnumerable<int> result1 = from p in products
+                                       where p.IsLowFat == true && p.IsRecyclable == true
+                                       select p.id;
 
 
 
